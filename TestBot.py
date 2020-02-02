@@ -3,7 +3,7 @@ from telebot import types
 import main_config
 telebot.apihelper.proxy = main_config.API
 
-bot = telebot.TeleBot('1036419164:AAHV0bQkmvJct5YLXHB7LM7sTA6VVK6GmIE')
+bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def first_message(message):
