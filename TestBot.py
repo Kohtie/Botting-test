@@ -1,6 +1,7 @@
 import telebot
 from telebot import types
-telebot.apihelper.proxy = {'https':'https://51.158.68.26:8811'}
+import main_config
+telebot.apihelper.proxy = main_config.API
 
 bot = telebot.TeleBot('1036419164:AAHV0bQkmvJct5YLXHB7LM7sTA6VVK6GmIE')
 
@@ -26,13 +27,3 @@ def callback_inline(call):
             bot.send_message(call.message.chat.id, 'COURSES:')
 
 bot.polling(none_stop=True)
-
-
-'''    
-def keyboadr():
-    markup = types.ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True)
-    books = types.KeyboardButton('Книги')
-    courses = types.KeyboardButton('Курсы')
-    markup.add(books, courses)
-    return markup
-'''
